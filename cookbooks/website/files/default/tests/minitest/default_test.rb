@@ -25,5 +25,6 @@ class TestWebsite < MiniTest::Chef::TestCase
 
   def test_home_page_content
     file("/var/www/index.html").must_include node['conference']['name']
+    file("/var/www/index.html").must_include node['conference']['city']
   end
 end
