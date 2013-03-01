@@ -1,7 +1,9 @@
 require 'chefspec'
 
 describe 'website::default' do
-  chef_run = ChefSpec::ChefRunner.new
+  chef_run = ChefSpec::ChefRunner.new(platform:'ubuntu', version:'12.04') do |node|
+    node.set["conference"]["name"] = "My Awesome Conference!"
+  end
   chef_run.converge "website::default"
 
   it "should install apache package" do
@@ -14,7 +16,7 @@ describe 'website::default' do
 
   it "should create a home page with our content" do
     chef_run.should create_file_with_content(
-      "/var/www/index.html","Big Ruby")
+      "/var/www/index.html","My Awesome Conference!")
   end
 
   it "should start the apache service" do
