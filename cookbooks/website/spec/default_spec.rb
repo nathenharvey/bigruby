@@ -4,7 +4,7 @@ describe 'website::default' do
   chef_run = ChefSpec::ChefRunner.new
   chef_run.converge "website::default"
 
-  it "should install apahce package" do
+  it "should install apache package" do
     chef_run.should install_package "apache2"
   end
 
