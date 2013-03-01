@@ -11,7 +11,7 @@ package "apache2"
 template "/var/www/index.html" do
   owner "www-data"
   group "www-data"
-  mode  "0644"
+  mode  644
   source "index.html.erb"
 end
 
