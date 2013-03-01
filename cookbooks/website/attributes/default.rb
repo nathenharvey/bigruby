@@ -1,1 +1,1 @@
-default['conference']["name"] = "Big Ruby"
+default['conference']['name'] = "Big Ruby"
