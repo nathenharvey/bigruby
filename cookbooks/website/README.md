@@ -19,7 +19,6 @@ TODO
 ----
 This is a trivial example with lots of work left undone.
 
-* Include the city of the conference on the home page
 * Move the content of the home page to a separate repository 
 under it's own version control.
 
